@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/evestatic</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">password</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <property name="show_sql">true</property>
+
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+        <mapping class="de.dornathal.eve.live.Attribute"/>
+        <mapping class="de.dornathal.eve.live.Faction"/>
+        <mapping class="de.dornathal.eve.live.Unit"/>
+        <mapping class="de.dornathal.eve.live.Race"/>
+
+        <mapping class="de.dornathal.eve.live.attributes.AttributeType"/>
+        <mapping class="de.dornathal.eve.live.attributes.AttributeValue"/>
+
+        <mapping class="de.dornathal.eve.live.core.UniqueName"/>
+
+        <mapping class="de.dornathal.eve.live.map.Operation"/>
+        <mapping class="de.dornathal.eve.live.map.Station"/>
+        <mapping class="de.dornathal.eve.live.map.SolarSystem"/>
+        <mapping class="de.dornathal.eve.live.map.Universe"/>
+        <mapping class="de.dornathal.eve.live.map.Constellation"/>
+        <!-- <mapping class="de.dornathal.eve.live.map.Celestial"/> -->
+        <mapping class="de.dornathal.eve.live.map.Region"/>
+
+        <mapping class="de.dornathal.eve.live.npc.Agent"/>
+        <mapping class="de.dornathal.eve.live.npc.NpcCorporation"/>
+
+        <mapping class="de.dornathal.eve.live.planetary.Schematic"/>
+        <mapping class="de.dornathal.eve.live.planetary.ResourceSet"/>
+
+        <mapping class="de.dornathal.eve.live.product.ActivityUsage"/>
+        <mapping class="de.dornathal.eve.live.product.Category"/>
+        <!-- <mapping class="de.dornathal.eve.live.product.ControlTower"/> -->
+        <!-- <mapping class="de.dornathal.eve.live.product.ControlTowerResource"/> -->
+        <mapping class="de.dornathal.eve.live.product.Contraband"/>
+        <mapping class="de.dornathal.eve.live.product.Group"/>
+        <mapping class="de.dornathal.eve.live.product.MarketGroup"/>
+        <mapping class="de.dornathal.eve.live.product.ProductType"/>
+        <mapping class="de.dornathal.eve.live.product.ProductMaterial"/>
+        <mapping class="de.dornathal.eve.live.product.BlueprintType"/>
+
+        <mapping class="de.dornathal.eve.live.production.AssemblyLineGroup"/>
+        <mapping class="de.dornathal.eve.live.production.AssemblyLineStation"/>
+        <mapping class="de.dornathal.eve.live.production.AssemblyLineType"/>
+
+    </session-factory>
+</hibernate-configuration>
