@@ -16,7 +16,7 @@ public class RaceTest extends DatabaseConnectionTest {
 		assertEquals(staticObject.getRaceId(), id, "Mapped wrong: raceId");
 		assertEquals(staticObject.getName(), values[1], "Mapped wrong: name");
 		assertEquals(staticObject.getDescription(), values[2], "Mapped wrong: description");
-		//assertEquals(staticObject.getIcon().getIconId(), values[3], "Mapped wrong: icon"); //Todo Enable Icon test
+		assertEquals(staticObject.getIcon(), values[3], "Mapped wrong: iconId");
 		assertEquals(staticObject.getShortDescription(), values[4], "Mapped wrong: shortDescription");
 	}
 

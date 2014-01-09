@@ -35,7 +35,7 @@ public class NpcCorporationTest extends DatabaseConnectionTest {
 		assertEquals(staticObject.getStationCount(), values[24], "Mapped wrong: stationCount");
 		assertEquals(staticObject.getStationSystemCount(), values[25], "Mapped wrong: stationSystemCount");
 		assertEquals(staticObject.getDescription(), values[26], "Mapped wrong: description");
-		//assertEquals(staticObject.getIcon().getIconId(), values[27], "Mapped wrong: iconId");
+		assertEquals(staticObject.getIcon().getIconId(), values[27], "Mapped wrong: iconId");
 	}
 
 	//This function will provide the parameter data

@@ -2,7 +2,10 @@ package de.dornathal.eve.live;
 
 import de.dornathal.eve.live.database.ChrRaces;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = ChrRaces.TABLE)
@@ -14,9 +17,8 @@ public class Race {
 	private String name;
 	@Column(name = ChrRaces.DESCRIPTION)
 	private String description;
-	//@JoinColumn(name=ChrRaces.ICON_ID)
-	@Transient //Todo Icon
-	private Icon icon;
+	@Column(name = ChrRaces.ICON_ID)
+	private int iconId;
 	@Column(name = ChrRaces.SHORT_DESCRIPTION)
 	private String shortDescription;
 
@@ -28,8 +30,8 @@ public class Race {
 		return description;
 	}
 
-	public Icon getIcon() {
-		return icon;
+	public int getIcon() {
+		return iconId;
 	}
 
 	public String getShortDescription() {

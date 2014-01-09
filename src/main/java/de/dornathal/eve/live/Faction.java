@@ -23,8 +23,8 @@ public class Faction {
 	private String name;
 	@Column(name = ChrFactions.DESCRIPTION)
 	private String description;
-	@Transient //Todo Icon
-	private Icon icon;
+	@Column(name = ChrFactions.ICON_ID)
+	private int iconId;
 	//@OneToOne
 	//@JoinColumn(name = ChrFactions.RACE_IDS)
 	@Transient
@@ -56,7 +56,7 @@ public class Faction {
 	}
 
 	public Icon getIcon() {
-		return icon;
+		return new Icon(Icon.IconType.Corporation, iconId);
 	}
 
 	public Race getRace() {

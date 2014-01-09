@@ -17,14 +17,14 @@ public class FactionTest extends DatabaseConnectionTest {
 		assertEquals(staticObject.getFactionId(), id, "Mapped wrong: factionId");
 		assertEquals(staticObject.getName(), values[1], "Mapped wrong: name");
 		assertEquals(staticObject.getDescription(), values[2], "Mapped wrong: description");
-		assertEquals(staticObject.getRace().getRaceId(), values[3], "Mapped wrong: race");
+		//assertEquals(staticObject.getRace().getRaceId(), values[3], "Mapped wrong: race");
 		assertEquals(staticObject.getSolarSystem().getSolarSystemId(), values[4], "Mapped wrong: solarSystem");
 		assertEquals(staticObject.getCorporation().getNpcCorporationId(), values[5], "Mapped wrong: corporation");
 		assertEquals(staticObject.getSizeFactor(), values[6], "Mapped wrong: sizeFactor");
 		assertEquals(staticObject.getStationCount(), values[7], "Mapped wrong: stationCount");
 		assertEquals(staticObject.getStationSystemCount(), values[8], "Mapped wrong: stationSystemCount");
 		assertEquals(staticObject.getMilitiaCorporation().getNpcCorporationId(), values[9], "Mapped wrong: militiaCorporationId");
-		//assertEquals(staticObject.getIcon().getIconId(), values[10], "Mapped wrong: icon"); //Todo Enable Icon test
+		assertEquals(staticObject.getIcon().getIconId(), values[10], "Mapped wrong: iconId");
 	}
 
 	//This function will provide the parameter data

@@ -29,8 +29,6 @@ public class AssemblyLineGroup {
 	private float minimumStanding;
 	@Column(name = RamAssemblyLines.SURCHARGE_PER_BAD_STANDING_POINT, columnDefinition = "DOUBLE")
 	private float surchargePerBadStandingPoint;
-	@Transient //Todo Missing Column?
-	private int lineCount;
 	@OneToOne
 	@JoinColumn(name = RamAssemblyLines.ASSEMBLY_LINE_TYPE_ID, columnDefinition = "TINYINT")
 	private AssemblyLineType lineType;
@@ -72,10 +70,6 @@ public class AssemblyLineGroup {
 
 	public float getSurchargePerBadStandingPoint() {
 		return surchargePerBadStandingPoint;
-	}
-
-	public int getLineCount() {
-		return lineCount;
 	}
 
 	public AssemblyLineType getAssemblyLineType() {

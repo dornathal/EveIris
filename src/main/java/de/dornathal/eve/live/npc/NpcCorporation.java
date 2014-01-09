@@ -31,8 +31,8 @@ public class NpcCorporation {
 	@OneToOne
 	@JoinColumn(name = CrpNPCCorporations.ENEMY_ID)
 	private NpcCorporation enemyCorporation;
-	@Transient //Todo Icon
-	private Icon icon;
+	@Column(name = CrpNPCCorporations.ICON_ID)
+	private int iconId;
 	@Column(name = CrpNPCCorporations.SIZE, columnDefinition = "CHAR")
 	private char size;
 	@Column(name = CrpNPCCorporations.SIZE_FACTOR)
@@ -63,7 +63,7 @@ public class NpcCorporation {
 	}
 
 	public Icon getIcon() {
-		return icon;
+		return new Icon(Icon.IconType.Corporation, iconId);
 	}
 
 	public NpcCorporationSize getSize() {
