@@ -25,8 +25,6 @@ public class DataCoreTest {
 
 	@Test
 	public void findAgent_ValidId_ReturnsAttachedEntity() {
-		//'3008416', '22', '1000002', '60000004', '1', '20', '2', '0'
-
 		int id = 3008416;
 
 		Agent staticObject = dataCore.findAgent(id);
@@ -131,15 +129,6 @@ public class DataCoreTest {
 		Group staticObject = dataCore.findGroup(id);
 
 		assertEquals(id, staticObject.getGroupId());
-	}
-
-	@Test
-	public void findIcon_ValidId_ReturnsAttachedEntity() {
-		int id = 5000001;
-
-		Icon staticObject = dataCore.findIcon(id);
-
-		assertEquals(id, staticObject.getIconId());
 	}
 
 	@Test
